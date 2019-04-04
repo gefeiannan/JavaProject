@@ -1,0 +1,32 @@
+mybatis:
+#  mapper-locations: classpath:mapper\postgre\*.xml
+  configLocation: classpath:mybatis-config.xml
+spring:
+  datasource:
+    datasource1:
+      driverClassName: org.postgresql.Driver
+      jdbcUrl: jdbc:postgresql://127.0.0.1:5432/test?stringtype=unspecified
+      username: postgres
+      password: sa123456
+    datasource2:
+      driverClassName: org.postgresql.Driver
+      jdbcUrl: jdbc:postgresql://127.0.0.1:5432/test1?stringtype=unspecified
+      username: postgres
+      password: sa123456
+
+
+
+
+pagehelper:
+  #指定分页插件对应的库
+  helperDialect: oracle
+#  reasonable: true
+#  supportMethodsArguments: true
+#  params: count=countSql
+#  returnPageInfo: check
+
+logging:
+  level:
+    root: INFO
+    org.springframework.web: ERROR
+    com.example.dameng.system.mapper: Debug

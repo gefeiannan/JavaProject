@@ -1,0 +1,21 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE mapper
+        PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN"
+        "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+<mapper namespace="com.example.dameng.system.mapper.FondsMapper">
+
+    <!-- 根据主键查找全宗 -->
+    <select id="findById" resultType="com.example.dameng.system.entity.Fonds">
+        select * from t_fonds where id = #{id}
+    </select>
+
+    <!-- 根据全宗名查找全宗 -->
+    <select id="findByFondscode" resultType="com.example.dameng.system.entity.Fonds">
+        select * from t_fonds where fondscode = #{fondscode}
+    </select>
+
+    <!-- 查找所有全宗 -->
+    <select id="findAll" resultType="com.example.dameng.system.entity.Fonds">
+        select * from t_fonds order by data_flag,fondscode
+    </select>
+</mapper>

@@ -1,0 +1,25 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE configuration
+        PUBLIC "-//mybatis.org//DTD Config 3.0//EN"
+        "http://mybatis.org/dtd/mybatis-3-config.dtd">
+<configuration>
+    <settings>
+        <setting name="mapUnderscoreToCamelCase" value="true"/>
+        <setting name="callSettersOnNulls" value="true" />
+        <!--<setting name="cacheEnabled" value="true"/>-->
+    </settings>
+    <typeAliases>
+        <!--<package name="com.example.dameng.master.sys.entity"/>-->
+        <!--<package name="com.example.dameng.master.test.entity"/>-->
+        <!--<package name="com.example.dameng.slave.entity"/>-->
+        <package name="com.example.dameng.system.entity" />
+        <package name="com.example.dameng.user.entity" />
+    </typeAliases>
+    <mappers>
+        <!--<mapper resource="mapper/dameng/sys/UserMapper.xml"/>-->
+        <!--<mapper resource="mapper/dameng/test/CompanyMapper.xml"/>-->
+        <mapper resource="mapper/postgre/FondsMapper.xml"/>
+        <!--<mapper resource="mapper/postgre/system/FondsMapper.xml"/>-->
+        <mapper resource="mapper/postgre/UserMapper.xml"/>
+    </mappers>
+</configuration>
